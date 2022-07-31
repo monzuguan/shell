@@ -11,7 +11,6 @@ case $yn in
 		exit 1;;
 esac
 
-if [ ! -d "${OUTPUTDIR}" ]; then mkdir -p "${OUTPUTDIR}"; fi
 for MP4 in `find . -type f -name "*.mp4"`; do
 MP4DIR=$(echo $MP4 | sed 's/\.mp4$//')
 OUTPUTNAME=$(echo $MP4DIR | awk -F / '{print $NF}')
